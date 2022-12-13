@@ -4,6 +4,22 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function App() {
+  const [email, setEmail] = useState();
+  const [senha, setSenha] = useState();
+  const mudarPagina = useNavigate();
+  const enviar = async() => {
+    const usuario = {
+      email,
+      senha
+    }
+    const resultado = await axios.post("",usuario)
+    if (resultado.code === 200){
+      mudarPagina("/inicio")
+    }if (resultado.code != 200) {
+      console.log(resultado.data)
+    }
+  }
+
   return (
     <div className="flex flex-col justify-center items-center h-screen" >
       <h1 className='text-slate-600 text-2xl m-7'>Login usuario</h1>
