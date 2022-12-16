@@ -7,6 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Reset from './reset';
 
 const router = createBrowserRouter([
   {
@@ -14,8 +15,12 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: "/inicio",
+    path: "/cadastro",
     element: <Cadastro/>,
+  },
+  {
+    path: "/reset",
+    element: <Reset/>,
   }
 ]);
 
