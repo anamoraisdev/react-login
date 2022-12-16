@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Inicio from './inicio'
+import Cadastro from './cadastro'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/inicio",
-    element: <Inicio/>,
+    element: <Cadastro/>,
   }
 ]);
 

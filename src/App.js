@@ -15,7 +15,7 @@ function App() {
     const resultado = await axios.post("",usuario)
     if (resultado.code === 200){
       mudarPagina("/inicio")
-    }if (resultado.code != 200) {
+    }if (resultado.code !== 200) {
       console.log(resultado.data)
     }
   }
