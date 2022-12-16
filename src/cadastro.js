@@ -2,6 +2,28 @@ import React, {useState} from "react";
 import axios from "axios";
 
 const Cadastro = () => {
+    const [nome, setNome] = useState();
+    const [sobrenome, setSobrenome] = useState();
+    const [nascimento, setNascimento] = useState();
+    const [email, setEmail] = useState();
+    const [senha, setSenha] = useState();
+    const [senhaConfirmada, setSenhaConfirmada] = useState();
+    const cadastrar = async () => {
+        const newUsuario = {
+            nome,
+            sobrenome,
+            nascimento,
+            email,
+            senha,
+            senhaConfirmada
+        }
+        const resultado = await axios.post("", newUsuario)
+        if (resultado.code === 200){
+            console.log("usuario cadastrado com sucesso!")
+        } if (resultado.code !== 200){
+            console.log(resultado.data)
+        }
+    }
     return (
         <div className="flex flex-col justify-center items-center h-screen gap-10 ">
             <h1 className='text-slate-600 text-2xl'>Cadastro</h1>
