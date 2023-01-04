@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Cadastro from './cadastro'
+import Reset from './reset';
+import Principal from './principal';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Reset from './reset';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/reset",
     element: <Reset/>,
+  },
+  {
+    path: "/principal",
+    element: <Principal/>,
   }
 ]);
 

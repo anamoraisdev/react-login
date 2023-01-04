@@ -13,9 +13,9 @@ function App() {
       senha
     }
     const resultado = await axios.post("",usuario)
-    if (resultado.code === 200){
+    if (resultado.status === 200){
       mudarPagina("/inicio")
-    }if (resultado.code !== 200) {
+    }if (resultado.status !== 200) {
       console.log(resultado.data)
     }
   }
@@ -30,7 +30,10 @@ function App() {
         <input type="text" placeholder='email' onChange={(event) => setEmail(event.target.value)} className="w-[60%] h-8 m-3 shadow"/>
         <input type="password" placeholder='senha' onChange={(event) => setSenha(event.target.value)} className="w-[60%] h-8 m-3 shadow"/>
         <button type='submit' onClick={() => enviar()} className="bg-[#203A40] text-white w-[30%] h-8 hover:bg-slate-500 m-3"> enviar </button>
-        
+        <div className='flex gap-4 text-xs underline text-gray-500'>
+          <a href='/cadastro'>Ainda não tem conta?</a>
+          <a href='/reset'> Esqueceu sua senha?</a>
+        </div>
       </div>
     </div>
   );
