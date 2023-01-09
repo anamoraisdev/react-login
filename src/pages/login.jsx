@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function App() {
+function Login() {
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
   const mudarPagina = useNavigate();
@@ -39,4 +39,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;

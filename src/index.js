@@ -1,31 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import Cadastro from './cadastro'
-import Reset from './reset';
-import Principal from './principal';
+import './style/index.css';
+import Login from './pages/login';
+import Cadastro from './pages/cadastro'
+import Reset from './pages/reset';
+import Colletion from './pages/colletion';
+import Pokemon from './pages/pokemon';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Newsletter from './pages/newsletter';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-  },
-  {
-    path: "/cadastro",
-    element: <Cadastro/>,
+    element: <Login/>,
   },
   {
     path: "/reset",
     element: <Reset/>,
   },
   {
-    path: "/principal",
-    element: <Principal/>,
+    path: "/cadastro",
+    element: <Cadastro/>,
+  },
+  {
+    path: "/colletion",
+    element: <Colletion/>,
+  },
+  {
+    path: "/news",
+    element: <Newsletter/>,
+  },
+  {
+    path: "/pokemon/:pokemon_name",
+    element: <Pokemon/>,
   }
 ]);
 

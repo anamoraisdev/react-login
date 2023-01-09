@@ -4,7 +4,6 @@ import axios from "axios";
 const Cadastro = () => {
     const [nome, setNome] = useState();
     const [sobrenome, setSobrenome] = useState();
-    const [nascimento, setNascimento] = useState();
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
     const [senhaConfirmada, setSenhaConfirmada] = useState();
@@ -12,7 +11,6 @@ const Cadastro = () => {
         const newUsuario = {
             nome,
             sobrenome,
-            nascimento,
             email,
             senha,
             senhaConfirmada
